@@ -1,0 +1,351 @@
+# diff all
+
+# version
+# Rotorflight / STM32F7X2 (S7X2) 4.3.0-RC2 Apr 15 2024 / 09:14:18 (ba6c7e3) MSP API: 12.6
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name NEXUS_F7
+board_design F7A1
+manufacturer_id RDMS
+mcu_id 003b003c3233510f39373734
+signature 
+
+# name: Tron 7.0
+
+# feature
+feature RX_SERIAL
+feature TELEMETRY
+feature GOVERNOR
+feature ESC_SENSOR
+feature FREQ_SENSOR
+feature RPM_FILTER
+
+# serial
+serial 0 1024 115200 57600 0 115200
+serial 3 64 115200 57600 0 115200
+
+# servo
+servo 1 770 -350 350 250 250 333 0 0
+servo 2 758 -350 350 250 250 333 0 1
+servo 3 767 -350 350 250 250 333 0 0
+servo 4 767 -350 350 250 250 500 0 1
+
+# mixer input
+mixer input SR -1208 1208 588
+mixer input SP -1208 1208 -588
+mixer input SY -833 1458 900
+mixer input SC -1250 1250 712
+
+# map
+map AECR1T23
+
+# aux
+aux 0 0 0 1940 2020 0 0
+aux 1 53 2 1950 2040 0 0
+aux 2 0 0 900 900 0 0
+aux 3 0 0 900 900 0 0
+aux 4 0 0 900 900 0 0
+aux 5 0 0 900 900 0 0
+aux 6 0 0 900 900 0 0
+aux 7 0 0 900 900 0 0
+aux 8 0 0 900 900 0 0
+aux 9 0 0 900 900 0 0
+aux 10 0 0 900 900 0 0
+aux 11 0 0 900 900 0 0
+aux 12 0 0 900 900 0 0
+aux 13 0 0 900 900 0 0
+aux 14 0 0 900 900 0 0
+aux 15 0 0 900 900 0 0
+aux 16 0 0 900 900 0 0
+aux 17 0 0 900 900 0 0
+aux 18 0 0 900 900 0 0
+aux 19 0 0 900 900 0 0
+
+# adjfunc
+adjfunc 0 1 255 1500 1500 1 1000 2000 1500 1500 0 1 3
+adjfunc 1 2 255 1500 1500 3 990 2000 1500 1500 0 1 3
+adjfunc 2 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 3 14 4 1165 1215 5 1385 1405 1280 1300 5 10 200
+adjfunc 4 18 4 1165 1215 5 1175 1195 1075 1095 5 10 200
+adjfunc 5 22 4 1165 1215 5 1695 1715 1595 1615 5 10 200
+adjfunc 6 15 4 1370 1420 5 1380 1400 1280 1300 5 10 200
+adjfunc 7 19 4 1370 1420 5 1175 1195 1075 1095 5 10 200
+adjfunc 8 23 4 1370 1420 5 1700 1720 1595 1615 5 10 200
+adjfunc 9 16 4 1575 1625 5 1380 1400 1280 1300 5 10 201
+adjfunc 10 20 4 1575 1625 5 1175 1195 1075 1095 5 10 200
+adjfunc 11 24 4 1575 1625 5 1695 1715 1595 1615 5 10 200
+adjfunc 12 17 4 1785 1835 5 1380 1400 1280 1300 5 10 200
+adjfunc 13 21 4 1785 1835 5 1175 1195 1075 1095 5 10 200
+adjfunc 14 25 4 1785 1835 5 1695 1715 1595 1615 5 10 200
+adjfunc 15 56 4 1975 2025 5 1380 1400 1280 1300 5 0 200
+adjfunc 16 57 4 1975 2025 5 1175 1195 1075 1095 5 0 250
+adjfunc 17 58 4 1975 2025 5 1695 1715 1595 1615 5 0 200
+adjfunc 18 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 19 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 20 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 21 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 22 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 23 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 24 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 25 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 26 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 27 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 28 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 29 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 30 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 31 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+
+# master
+set gyro_lpf1_static_hz = 140
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 2
+set dyn_notch_q = 45
+set acc_calibration = 4,37,0,1
+set serialrx_provider = CRSF
+set blackbox_mode = ARMED
+set blackbox_rate_denom = 2
+set blackbox_log_mixer = OFF
+set blackbox_log_attitude = ON
+set blackbox_log_acc = ON
+set blackbox_log_alt = ON
+set blackbox_log_vbec = ON
+set blackbox_log_vbus = ON
+set blackbox_log_rssi = OFF
+set blackbox_log_servos = OFF
+set min_throttle = 1010
+set motor_pwm_rate = 50
+set motor_poles = 10,8,8,8
+set main_rotor_gear_ratio = 16,155
+set tail_rotor_gear_ratio = 25,127
+set align_board_yaw = 180
+set bat_capacity = 3000
+set current_meter = ESC
+set battery_meter = ESC
+set battery_cell_count = 12
+set tail_center_trim = 275
+set swash_pitch_limit = 2000
+set swash_geo_correction = 8
+set gov_mode = MODE1
+set gov_startup_time = 500
+set gov_tracking_time = 100
+set gov_autorotation_min_entry_time = 5
+set gov_zero_throttle_timeout = 40
+set gov_handover_throttle = 30
+set rc_deflection = 511
+set rc_arm_throttle = 1000
+set rc_min_throttle = 1010
+set rc_max_throttle = 2012
+set yaw_deadband = 4
+set crsf_gps_ground_speed_reuse = THROTTLE
+set crsf_gps_altitude_reuse = HEADSPEED
+set crsf_gps_sats_reuse = PROFILE
+set telemetry_enable_pitch = ON
+set telemetry_enable_roll = ON
+set telemetry_enable_heading = ON
+set telemetry_enable_altitude = ON
+set telemetry_enable_vario = ON
+set telemetry_enable_lat_long = ON
+set telemetry_enable_ground_speed = ON
+set telemetry_enable_esc_current = ON
+set telemetry_enable_esc_voltage = ON
+set telemetry_enable_adjustment = ON
+set telemetry_enable_gov_mode = ON
+set esc_sensor_protocol = HOBBYWINGV4
+set gyro_rpm_filter_bank_rpm_source = 11,12,13,14,21,22,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_limit = 1400,1400,1400,1400,7110,7110,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_notch_q = 35,50,50,50,45,45,0,0,0,0,0,0,0,0,0,0
+set name = Tron 7.0
+
+profile 0
+
+# profile 0
+set pitch_p_gain = 55
+set pitch_d_gain = 60
+set roll_p_gain = 55
+set roll_d_gain = 40
+set yaw_p_gain = 90
+set yaw_d_gain = 60
+set gov_headspeed = 1820
+
+profile 1
+
+# profile 1
+set pitch_p_gain = 65
+set pitch_i_gain = 180
+set pitch_d_gain = 95
+set pitch_f_gain = 90
+set pitch_b_gain = 35
+set roll_p_gain = 65
+set roll_i_gain = 180
+set roll_d_gain = 60
+set roll_f_gain = 90
+set roll_b_gain = 35
+set yaw_p_gain = 80
+set yaw_i_gain = 125
+set yaw_d_gain = 50
+set yaw_b_gain = 30
+set yaw_f_gain = 30
+set yaw_ccw_stop_gain = 85
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 20
+set pitch_collective_ff_gain = 5
+set cyclic_cross_coupling_gain = 40
+set cyclic_cross_coupling_cutoff = 20
+set error_limit = 45,45,45
+set error_decay_time_ground = 20
+set iterm_relax_cutoff = 30,15,11
+set gov_headspeed = 1900
+set gov_cyclic_ff_weight = 50
+set gov_collective_ff_weight = 130
+
+profile 2
+
+# profile 2
+set pitch_p_gain = 60
+set pitch_i_gain = 180
+set pitch_d_gain = 75
+set pitch_f_gain = 90
+set pitch_b_gain = 35
+set roll_p_gain = 60
+set roll_i_gain = 180
+set roll_d_gain = 45
+set roll_f_gain = 90
+set roll_b_gain = 35
+set yaw_p_gain = 65
+set yaw_i_gain = 125
+set yaw_d_gain = 45
+set yaw_b_gain = 30
+set yaw_f_gain = 30
+set yaw_ccw_stop_gain = 85
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 20
+set pitch_collective_ff_gain = 5
+set cyclic_cross_coupling_gain = 40
+set cyclic_cross_coupling_cutoff = 20
+set error_limit = 45,45,45
+set error_decay_time_ground = 20
+set iterm_relax_cutoff = 30,15,11
+set gov_headspeed = 2060
+set gov_cyclic_ff_weight = 50
+set gov_collective_ff_weight = 110
+
+profile 3
+
+# profile 3
+set pitch_p_gain = 125
+set pitch_i_gain = 80
+set pitch_d_gain = 52
+set pitch_f_gain = 85
+set pitch_b_gain = 40
+set pitch_o_gain = 20
+set roll_p_gain = 57
+set roll_i_gain = 80
+set roll_d_gain = 5
+set roll_b_gain = 5
+set roll_o_gain = 20
+set yaw_p_gain = 85
+set yaw_i_gain = 85
+set yaw_d_gain = 15
+set yaw_f_gain = 17
+set pitch_d_cutoff = 20
+set pitch_b_cutoff = 20
+set pitch_gyro_cutoff = 60
+set roll_d_cutoff = 20
+set roll_b_cutoff = 20
+set roll_gyro_cutoff = 60
+set yaw_d_cutoff = 28
+set yaw_b_cutoff = 30
+set yaw_gyro_cutoff = 110
+set yaw_ccw_stop_gain = 45
+set yaw_cyclic_ff_gain = 2
+set yaw_collective_ff_gain = 20
+set cyclic_cross_coupling_gain = 10
+set offset_limit = 60,60
+set iterm_relax_cutoff = 10,9,10
+set gov_headspeed = 1710
+
+profile 4
+
+profile 5
+
+# restore original profile selection
+profile 1
+
+rateprofile 0
+
+# rateprofile 0
+set yaw_rc_rate = 33
+set collective_rc_rate = 56
+set roll_expo = 30
+set pitch_expo = 30
+set yaw_expo = 30
+set roll_srate = 30
+set pitch_srate = 30
+set yaw_srate = 60
+set collective_srate = 56
+
+rateprofile 1
+
+# rateprofile 1
+set yaw_rc_rate = 33
+set roll_expo = 30
+set pitch_expo = 30
+set yaw_expo = 30
+set roll_srate = 27
+set pitch_srate = 27
+
+rateprofile 2
+
+# rateprofile 2
+set yaw_rc_rate = 33
+set roll_expo = 30
+set pitch_expo = 30
+set yaw_expo = 30
+set roll_srate = 27
+set pitch_srate = 27
+
+rateprofile 3
+
+rateprofile 4
+
+# rateprofile 4
+set roll_rc_rate = 36
+set pitch_rc_rate = 36
+set collective_rc_rate = 48
+set roll_srate = 36
+set pitch_srate = 36
+set yaw_srate = 36
+set collective_srate = 48
+
+rateprofile 5
+
+# rateprofile 5
+set rates_type = RACEFLIGHT
+set roll_rc_rate = 28
+set pitch_rc_rate = 28
+set yaw_rc_rate = 58
+set collective_rc_rate = 51
+set roll_expo = 15
+set pitch_expo = 15
+set yaw_expo = 75
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set collective_srate = 0
+set roll_response = 20
+set pitch_response = 20
+set yaw_response = 10
+set collective_response = 20
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
